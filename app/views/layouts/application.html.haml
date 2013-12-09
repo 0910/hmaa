@@ -1,0 +1,27 @@
+!!!
+%html
+	%head
+		%title HMAA
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body(data-spy="scroll" data-target="#navbar"){:id => "#{controller_name}", :class => "#{controller_name} #{controller_name}_#{action_name}"}
+		.navbar.navbar-inverse.navbar.fixed-nav
+			#blkbar
+			= link_to '', root_path, class: 'brand'
+			.navbar-inner
+				.container
+					.nav-collapse.collapse
+						%ul.nav.navbar
+							%li#home
+								= link_to('home', root_path)
+							%li#proyectos
+								= link_to('proyectos', '#')
+							%li#nosotros
+								= link_to('nosotros', info_path)
+							%li#contacto
+								= link_to('contacto', contact_path)
+		.no-margin.loader-section{:class => "#{action_name}"}
+			= yield
+	%script(type='text/javascript')
+		$("img.lazy").lazyload({effect : "fadeIn"});

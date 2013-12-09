@@ -1,0 +1,91 @@
+.row-fluid#filter
+	.span3
+		%a{:href => '#', :name => 'type', :value => 'all'} todo
+	.span3
+		%a{:href => '#', :name => 'type', :value => 'terminados'} terminados
+	.span3
+		%a{:href => '#', :name => 'type', :value => 'desarrollo'} en desarrollo
+	.span3
+		%a{:href => '#', :name => 'type', :value => 'laboratorio'} laboratorio
+.row-fluid#work
+	%ul#workcontainer
+		%li{:class => 'span2', data:{id: '1', type: 'terminados'}}
+			= link_to({:action =>'show', :id => '1' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem1.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo uno
+					.ln2
+		%li{:class => 'span2', data:{id: '2', type: 'desarrollo'}}
+			= link_to({:action =>'show', :id => '2' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem2.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo dos
+					.ln2
+		%li{:class => 'span2', data:{id: '3', type: 'laboratorio'}}
+			= link_to({:action =>'show', :id => '3' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem3.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo tres
+					.ln2
+		%li{:class => 'span2', data:{id: '4', type: 'terminados'}}
+			= link_to({:action =>'show', :id => '4' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem1.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo cuatro
+					.ln2
+		%li{:class => 'span2', data:{id: '5', type: 'desarrollo'}}
+			= link_to({:action =>'show', :id => '5' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem2.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo cinco
+					.ln2
+		%li{:class => 'span2', data:{id: '6', type: 'laboratorio'}}
+			= link_to({:action =>'show', :id => '6' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem3.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo seis
+					.ln2
+		%li{:class => 'span2', data:{id: '7', type: 'terminados'}}
+			= link_to({:action =>'show', :id => '7' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem1.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo siete
+					.ln2
+		%li{:class => 'span2', data:{id: '8', type: 'desarrollo'}}
+			= link_to({:action =>'show', :id => '8' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem2.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo ocho
+					.ln2
+		%li{:class => 'span2', data:{id: '9', type: 'laboratorio'}}
+			= link_to({:action =>'show', :id => '9' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem3.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo nueve
+					.ln2
+		%li{:class => 'span2', data:{id: '10', type: 'terminados'}}
+			= link_to({:action =>'show', :id => '10' }, :class => 'image') do
+				=image_tag('empty.gif', :class => 'lazy', data:{original: 'assets/ejem1.jpg'})
+				.over
+				.over_cross
+					.ln
+					%p proyecto ejemplo diez
+					.ln2

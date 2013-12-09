@@ -1,0 +1,82 @@
+@font-face {  
+  font: {
+    family: 'Conv_DINEngschriftStd';
+    weight: 'normal';
+    style: 'normal';
+  }
+    src: asset-url('DINEngschriftStd.eot', font);
+    src: asset-url('DINEngschriftStd.eot', font) format('embedded-opentype'),
+         asset-url('DINEngschriftStd.woff', font) format('woff'), 
+         asset-url('DINEngschriftStd.ttf', font) format('truetype'), 
+         asset-url('DINEngschriftStd.svg', font) format('svg');
+}
+
+#work {
+  ul#workcontainer{
+    margin:0;
+    padding:0;
+    li{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+  }
+}
+.concrete{
+  position:fixed;
+  width:100%;
+  min-height:100%;
+  background:url(raw-concrete-texture.jpg) #CCC;
+  a.open{
+    position:absolute;
+    margin-top:40px;
+    left:-50px;
+    background:#FFF;
+    width:50px;
+    height:50px;
+    background:url(open.png) center no-repeat #FFF;
+    z-index:9999;
+    opacity:0.9;
+  }
+  .desc{
+    position:absolute;
+    margin-top:40px;
+    background:#FFF;
+    opacity:0.9;
+    padding:40px 20px 30px 40px;
+    z-index:9999;
+    .no-opc{
+      opacity:1;
+      a.close{
+        position:absolute;
+        top:40px;
+        right:30px;
+        width:30px;
+        height:30px;
+        background:url(close.png) transparent;
+        opacity:1;
+      }
+      p.title{
+        font-family: 'Conv_DINEngschriftStd';
+        margin: 0px;
+        color: #231F20;
+        text-transform: uppercase;
+        font-size: 55px;
+        line-height: 50px;
+      }
+      .line{
+        width:100px;
+        height:1px;
+        background:#9D9D9D;
+        margin-top:20px;
+      }
+      .desc-cont{
+        margin-top:20px;
+        padding-right:30px;
+        overflow:hidden;
+        height:350px;
+      }
+    }
+  }
+}
+

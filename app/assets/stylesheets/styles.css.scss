@@ -1,0 +1,261 @@
+/*
+LAYOUT
+*/
+.row-fluid{
+  margin: 0;
+}
+.row-fluid .span12{width: 100%;}
+.no-margin{
+	position: relative;
+	padding-top: 10em;
+}
+.no-margin [class*="span"] {
+    margin-left: 0;
+}
+.navbar-inverse .nav-collapse{height:auto;}
+.navbar-inverse .nav > li > a {text-shadow:none;font-weight:normal;}
+.navbar-inverse .nav > li > a:hover {color:#231F20;}
+.navbar-inverse .nav-collapse .nav > li > a:hover, 
+.navbar-inverse .nav-collapse .nav > li > a:focus, 
+.navbar-inverse .nav-collapse .dropdown-menu a:hover, 
+.navbar-inverse .nav-collapse .dropdown-menu a:focus{background-color:transparent;}
+/*
+FONT
+*/
+@font-face {	
+	font: {
+		family: 'Conv_DINEngschriftStd';
+		weight: 'normal';
+		style: 'normal';
+	}
+		src: asset-url('DINEngschriftStd.eot', font);
+		src: asset-url('DINEngschriftStd.eot', font) format('embedded-opentype'),
+				 asset-url('DINEngschriftStd.woff', font) format('woff'), 
+				 asset-url('DINEngschriftStd.ttf', font) format('truetype'), 
+				 asset-url('DINEngschriftStd.svg', font) format('svg');
+}
+@font-face {	
+	font: {
+		family: 'DINPro-Regular';
+		weight: 'normal';
+		style: 'normal';
+	}
+		src: asset-url('DINPro-Regular.eot', font);
+		src: asset-url('DINPro-Regular.eot', font) format('embedded-opentype'),
+				 asset-url('DINPro-Regular.woff', font) format('woff'), 
+				 asset-url('DINPro-Regular.ttf', font) format('truetype'), 
+				 asset-url('DINPro-Regular.svg', font) format('svg');
+}
+
+h6, p, a{
+	color: #545454;
+}
+h6, h3{
+	font-family: 'Conv_DINEngschriftStd';
+}
+p{
+	font-family: 'DINPro-Regular';
+}
+a{
+	font-family: 'Conv_DINEngschriftStd';
+	cursor: pointer;
+}
+p+a{
+	position: relative;
+	top: -0.625em;
+}
+strong{
+	font-family: 'Conv_DINEngschriftStd';
+}
+.no-margin{
+	padding-top:130px;
+}
+/*
+APPLICATION
+*/
+.navbar-inverse .navbar-inner{
+	background-color: transparent;
+	background-image: none;
+	border-color: #252525;
+	border:none;
+}
+.navbar{
+	margin-bottom:0px;
+}
+.fixed-nav{
+	position: fixed;
+	background: white;
+	display: block;
+	width: 100%;
+	height:120px;
+	z-index: 9999;
+	.loader-container{
+		margin-bottom: 20px;	
+		border-bottom: 1px solid #545454;
+		height: 5px;
+		#loader{
+			width: 100%;
+			height: 5px;
+			overflow: hidden;
+			display: block;
+			/*background: #666;*/
+		}
+	}
+	.brand{
+		background: url(hmaa.png);
+		width: 247px;
+		height: 50px;
+		margin: 35px 40px;
+		display: inline-block;
+		padding:0;
+	}
+	.nav{
+		display: inline-block;
+		position: relative;
+		margin: 28px 0 0 0;
+		li{
+			float:none;
+			padding:0;
+			margin:0;
+			line-height:0;
+			a{
+			font-family: 'Conv_DINEngschriftStd';
+			font-size: 15px;
+			margin:0;
+			padding:8px 0;
+			text-transform: uppercase;
+			color: #808285;
+			letter-spacing:1px;
+			}
+			a:hover{
+				background: none;
+				color: #000;
+			}
+		}
+		li.active{
+			a{
+			color: #808285;
+			font-family: 'Conv_DINEngschriftStd';
+			}
+		}
+	}
+	.sub-section{
+		display: inline-block;
+		.work-category{
+			width: 100%;
+			height: 2em;
+			position: absolute;
+			top: 0;
+			left: 18%;
+			display: none;
+			li{
+				display: inline-block;
+				a{
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+#filter{
+	width:100%;
+	display:none;
+	.span3{
+		border-top:1px solid #CCC;
+		border-right:1px solid #CCC;
+		border-bottom:1px solid #CCC;
+		a{
+			display:inline-block;
+			width:100%;
+			padding:20px 0;
+			text-align:center;
+			font-family:'Conv_DINEngschriftStd';
+			font-size:15px;
+			letter-spacing:1px;
+			color:#333;
+			text-transform:uppercase;
+			text-decoration:none;
+		}
+		a:hover{
+			color:#000;
+			background:#F2F2F2;
+		}
+	}
+}
+
+@mixin select($section){
+	body.#{$section}{
+		#navbar li.#{$section} > a{
+			color: #111;
+		}
+	}
+}
+
+@each $section in(works, pages_info, pages_contact){
+	@include select($section);
+}
+
+#work{
+	.span2{
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+		img{
+			width: 100%;
+		}
+		.over{
+			background: #FFF;
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.9;
+		}
+		.over_cross{
+			display: none;
+			position: absolute;
+			top: 100%;
+			width: 60%;
+			height: 40%;
+			margin: 33% 20%;
+			p{
+				margin:0;
+				color: #000;
+				font-family: 'Conv_DINEngschriftStd';
+				color: #231F20;
+				font-size: 30px;
+				line-height: 34px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			.ln{
+				width:50%;
+				height:1px;
+				background:#333;
+				margin:0 auto 20px;
+			}
+			.ln2{
+				width:50%;
+				height:1px;
+				background:#333;
+				margin:20px auto 0;
+			}
+		}
+	}	
+}
+#info, #contact{
+	min-height: 500px;
+	margin: 5em 0 0 2.813em;
+	.span4{
+		padding-right: 10em;
+		h6:first-child{
+			margin-top: 0;
+		}
+	}
+}
+#blkbar{
+	width:100%;
+	height:7px;
+	background:#231F20;
+}
