@@ -15,12 +15,15 @@
 						%ul.nav.navbar
 							%li#home
 								= link_to('home', root_path)
-							%li#proyectos
-								= link_to('proyectos', '#')
-							%li#nosotros
-								= link_to('nosotros', info_path)
 							%li#contacto
 								= link_to('contacto', contact_path)
+							%li#proyectos
+								= link_to('proyecto', '#')
+							%li#contacto
+								= link_to('experimental', '#')
+							%li#nosotros
+								= link_to('nosotros', info_path)
+							
 		.no-margin.loader-section{:class => "#{action_name}"}
 			= yield
 	%script(type='text/javascript')

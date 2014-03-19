@@ -36,13 +36,13 @@ cambia = function(){
 	$('.bar').css('width', '0');
 	if(currImg != sldTot){
 		currImg = (currImg + 1);
-		$('.slide-cont-abs').animate({left: '-=100%'}, 500, 'easeOutQuad', function(){timer();});
+		$('.slide-cont-abs').animate({left: '-=100%'}, 1000, 'easeOutQuad', function(){timer();});
 	}else{
 		currImg = 1;
-		$('.slide-cont-abs').animate({left: '0'}, 500, 'easeOutQuad', function(){timer();});
+		$('.slide-cont-abs').animate({left: '0'}, 1000, 'easeOutQuad', function(){timer();});
 	};
 };
 timer = function(){
 	$('.bar').animate({'width': '100%'},4400, 'linear');
-	return cuenta = setTimeout('cambia()',4500);
+	return cuenta = setTimeout('cambia()',5500);
 };
