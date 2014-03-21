@@ -30,19 +30,19 @@ $(document).ready(function(){
 	slWidth = 100/itCant;
 	$('.slide-cont-abs').css({'width': [totalW]+'%', 'height': '100%'});
 	$('.slide').css({'width': [slWidth]+'%', 'height': '100%'});
-	timer();
+
+	$('#previmg').click(function(){
+		$('.bar').css('width', '0');
+		if(currImg >= 1){
+			currImg = (currImg - 1);
+			$('.slide-cont-abs').animate({left: '+=100%'}, 1000, 'easeOutQuad');
+		}
+	});
+	$('#nextimg').click(function(){
+		$('.bar').css('width', '0');
+		if(currImg < sldTot){
+			currImg = (currImg + 1);
+			$('.slide-cont-abs').animate({left: '-=100%'}, 1000, 'easeOutQuad');
+		}
+	});
 });
-cambia = function(){
-	$('.bar').css('width', '0');
-	if(currImg != sldTot){
-		currImg = (currImg + 1);
-		$('.slide-cont-abs').animate({left: '-=100%'}, 1000, 'easeOutQuad', function(){timer();});
-	}else{
-		currImg = 1;
-		$('.slide-cont-abs').animate({left: '0'}, 1000, 'easeOutQuad', function(){timer();});
-	};
-};
-timer = function(){
-	$('.bar').animate({'width': '100%'},4400, 'linear');
-	return cuenta = setTimeout('cambia()',5500);
-};
